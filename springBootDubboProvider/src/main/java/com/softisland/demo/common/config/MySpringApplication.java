@@ -2,7 +2,6 @@
 //
 //import org.springframework.boot.SpringApplication;
 //import org.springframework.context.ConfigurableApplicationContext;
-//import org.springframework.context.support.ClassPathXmlApplicationContext;
 //
 //public class MySpringApplication extends SpringApplication {
 //

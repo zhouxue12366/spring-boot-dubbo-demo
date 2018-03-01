@@ -3,6 +3,7 @@
 	<name>springBootDubboProvider</name>
 	<comment></comment>
 	<projects>
+		<project>springBootDubboApi</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

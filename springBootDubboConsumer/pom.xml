@@ -14,11 +14,6 @@
 	</parent>
 
 	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<scope>test</scope>
-		</dependency>
 		<!-- 自定义接口管理业务层 -->
 		<dependency>
 			<groupId>com.softisland.demo.api</groupId>
@@ -31,20 +26,20 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 			<!-- 移除嵌入式tomcat插件 -->
-<!-- 			<exclusions> -->
-<!-- 				<exclusion> -->
-<!-- 					<groupId>org.springframework.boot</groupId> -->
-<!-- 					<artifactId>spring-boot-starter-tomcat</artifactId> -->
-<!-- 				</exclusion> -->
-<!-- 			</exclusions> -->
+			<exclusions>
+				<exclusion>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-starter-tomcat</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		
 	<!-- servlet -->
-<!-- 		<dependency> -->
-<!-- 			<groupId>javax.servlet</groupId> -->
-<!-- 			<artifactId>javax.servlet-api</artifactId> -->
-<!-- 			<scope>provided</scope> -->
-<!-- 		</dependency> -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<scope>provided</scope>
+		</dependency>
 
 		<!-- dubbo -->
 		<dependency>
@@ -52,12 +47,12 @@
 			<artifactId>dubbo</artifactId>
 			<version>2.6.0</version>
 <!-- 			//这个排除低版本的spring -->
-			<exclusions>
-                <exclusion> 
-                    <groupId>org.springframework</groupId>
-                    <artifactId>spring</artifactId>
-                </exclusion>
-            </exclusions>
+<!-- 			<exclusions> -->
+<!--                 <exclusion>  -->
+<!--                     <groupId>org.springframework</groupId> -->
+<!--                     <artifactId>spring</artifactId> -->
+<!--                 </exclusion> -->
+<!--             </exclusions> -->
 		</dependency>
 
 		<!-- zookeeper链接包client -->

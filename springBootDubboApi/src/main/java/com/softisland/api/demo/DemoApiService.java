@@ -1,4 +1,4 @@
-package com.softisland.demo.common;
+package com.softisland.api.demo;
 
 /**
  * 测试用例接口定义管理
@@ -9,7 +9,7 @@ package com.softisland.demo.common;
  * @date 2018年2月26日 上午10:10:12
  * @version V1.0
  */
-public interface DemoService {
+public interface DemoApiService {
 	
 	public String sayHello(String name);
 }

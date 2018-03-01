@@ -1,19 +1,19 @@
 package com.softisland.demo.main.controller;
 
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
 
 import com.alibaba.dubbo.config.annotation.Reference;
-import com.softisland.demo.common.DemoService;
+import com.softisland.api.demo.DemoApiService;
 
-@RestController
+@Controller
 public class MainController {
 
 	@Reference
-	private DemoService demoService;
+	private DemoApiService demoService;
 
-	@RequestMapping("/")
+	@RequestMapping("/aaa")
 	@ResponseBody
 	public String home(String name) {
 		if (null == demoService) {
