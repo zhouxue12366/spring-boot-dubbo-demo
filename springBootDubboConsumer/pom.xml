@@ -46,13 +46,6 @@
 			<groupId>com.alibaba</groupId>
 			<artifactId>dubbo</artifactId>
 			<version>2.6.0</version>
-<!-- 			//这个排除低版本的spring -->
-<!-- 			<exclusions> -->
-<!--                 <exclusion>  -->
-<!--                     <groupId>org.springframework</groupId> -->
-<!--                     <artifactId>spring</artifactId> -->
-<!--                 </exclusion> -->
-<!--             </exclusions> -->
 		</dependency>
 
 		<!-- zookeeper链接包client -->

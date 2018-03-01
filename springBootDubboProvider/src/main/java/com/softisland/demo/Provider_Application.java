@@ -18,9 +18,18 @@ import org.springframework.context.annotation.ImportResource;
  */
 @SpringBootApplication
 @EnableAutoConfiguration
-@ImportResource("classpath:dubbo-demo-provider.xml")//很重要
+@ImportResource("classpath:dubbo-demo-provider.xml")//扫描加载dubbo的配置文件
 public class Provider_Application {
 	
+	/**
+	 *  如果使用main方法启动项目的话,需要将pom.xml中的移除嵌入式tomcat插件注释;
+	 * 相反,如果需要用自己的tomcat启动,只需要在pom.xml中移除嵌入式tomcat插件打开;
+	 * @Title main
+	 * @Description TODO  
+	 * @param args
+	 * @throws IOException 
+	 * @since 2018年3月1日 下午4:43:01
+	 */
 	public static void main(String[] args) throws IOException {
 		SpringApplication.run(Provider_Application.class, args);
 		System.out.println("provider*****************started");
