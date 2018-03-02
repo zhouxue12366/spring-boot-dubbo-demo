@@ -1,5 +1,9 @@
 package com.softisland.api.demo;
 
+import java.util.List;
+
+import com.jfinal.plugin.activerecord.Record;
+
 /**
  * 测试用例接口定义管理
  * @Title DemoService.java
@@ -11,5 +15,5 @@ package com.softisland.api.demo;
  */
 public interface DemoApiService {
 	
-	public String sayHello(String name);
+	public List<Record> sayHello(String name);
 }

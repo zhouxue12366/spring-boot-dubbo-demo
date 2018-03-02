@@ -2,10 +2,17 @@ package com.softisland.demo;
 
 import java.io.IOException;
 
+import javax.sql.DataSource;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ImportResource;
+import org.springframework.core.env.Environment;
+
+import com.alibaba.druid.pool.DruidDataSource;
 
 /**
  * 通过main方法启动服务者
@@ -18,8 +25,30 @@ import org.springframework.context.annotation.ImportResource;
  */
 @SpringBootApplication
 @EnableAutoConfiguration
+//@EnableTransactionManagement//启动事物加载
 @ImportResource("classpath:dubbo-demo-provider.xml")//扫描加载dubbo的配置文件
 public class Provider_Application {
+	
+	@Autowired
+    private Environment env;
+    
+    @Bean
+    public DataSource dataSource() {
+        DruidDataSource dataSource = new DruidDataSource();
+        dataSource.setUrl(env.getProperty("spring.datasource.url"));
+        dataSource.setUsername(env.getProperty("spring.datasource.username"));//用户名
+        dataSource.setPassword(env.getProperty("spring.datasource.password"));//密码
+        dataSource.setDriverClassName(env.getProperty("spring.datasource.driver-class-name"));
+        dataSource.setInitialSize(2);
+        dataSource.setMaxActive(20);
+        dataSource.setMinIdle(0);
+        dataSource.setMaxWait(60000);
+        dataSource.setValidationQuery("SELECT 1");
+        dataSource.setTestOnBorrow(false);
+        dataSource.setTestWhileIdle(true);
+        dataSource.setPoolPreparedStatements(false);
+        return dataSource;
+    }
 	
 	/**
 	 *  如果使用main方法启动项目的话,需要将pom.xml中的移除嵌入式tomcat插件注释;

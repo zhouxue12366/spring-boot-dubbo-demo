@@ -33,8 +33,15 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-		
-	<!-- servlet -->
+
+		<!-- jfinal -->
+		<dependency>
+			<groupId>com.jfinal</groupId>
+			<artifactId>jfinal</artifactId>
+			<version>3.3</version>
+		</dependency>
+
+		<!-- servlet -->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
