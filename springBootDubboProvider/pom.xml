@@ -40,11 +40,6 @@
 			<artifactId>jfinal</artifactId>
 			<version>3.3</version>
 		</dependency>
-		<!-- thymeleaf模板 -->
-		<!-- <dependency> -->
-		<!-- <groupId>org.springframework.boot</groupId> -->
-		<!-- <artifactId>spring-boot-starter-thymeleaf</artifactId> -->
-		<!-- </dependency> -->
 		
 <!-- 		引入spring-boot-starter-jdbc的依赖 -->
 <!-- 		<dependency> -->
