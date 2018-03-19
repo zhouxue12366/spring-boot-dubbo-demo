@@ -41,11 +41,19 @@
 			<version>3.3</version>
 		</dependency>
 
-		<!-- thymeleaf模板 -->
+		<!-- enjoy模板引擎 begin -->
 <!-- 		<dependency> -->
-<!-- 			<groupId>org.springframework.boot</groupId> -->
-<!-- 			<artifactId>spring-boot-starter-thymeleaf</artifactId> -->
+<!-- 			<groupId>com.jfinal</groupId> -->
+<!-- 			<artifactId>enjoy</artifactId> -->
+<!-- 			<version>3.2</version> -->
 <!-- 		</dependency> -->
+		<!-- enjoy模板引擎 end -->
+
+		<!-- thymeleaf模板 -->
+		<!-- <dependency> -->
+		<!-- <groupId>org.springframework.boot</groupId> -->
+		<!-- <artifactId>spring-boot-starter-thymeleaf</artifactId> -->
+		<!-- </dependency> -->
 
 		<!-- servlet -->
 		<dependency>
