@@ -18,4 +18,16 @@ public class DemoServiceImpl implements DemoApiService{
 		return records;
 	}
 
+	@Override
+	public Record getVideoById(String id) {
+		Record record = Db.findById("videos", id);
+		return record;
+	}
+
+	@Override
+	public List<Record> getList(int start,int end) {
+		List<Record> records = Db.find(" select * from videos limit "+ start +", "+ end );
+		return records;
+	}
+
 }

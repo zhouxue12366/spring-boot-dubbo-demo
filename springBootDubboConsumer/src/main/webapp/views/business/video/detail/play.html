@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>#(model.video_name ??)</title>
+    #@layout()
+    
+</head>
+
+<body>
+#@header()
+	
+	<!-- /////////////////////////////////////////Content -->
+	<div id="page-content" class="archive-page">
+		<div class="container">
+			<div class="row">
+			<div class="line"></div>
+				<!-- 	#(model.player_html ??) -->
+				<video src="#(model.video_url ??)" autoplay="autoplay" controls="controls" width="100%"></video>
+			</div>
+		</div>
+	</div>
+
+	#@footer()
+	
+	<!-- JS -->
+	<script src="#(ctx)/static/owl-carousel/owl.carousel.js"></script>
+    <script>
+    $(document).ready(function() {
+      $("#owl-demo").owlCarousel({
+        autoPlay: 3000,
+        items : 5,
+        itemsDesktop : [1199,4],
+        itemsDesktopSmall : [979,4]
+      });
+
+    });
+    </script>
+	
+</body>
+</html>

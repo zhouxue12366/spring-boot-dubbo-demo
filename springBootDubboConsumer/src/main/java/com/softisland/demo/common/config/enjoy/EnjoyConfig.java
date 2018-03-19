@@ -30,6 +30,8 @@ public class EnjoyConfig {
 		jfr.setOrder(0);
 		jfr.addSharedFunction("/views/common/_layout.html");
 		jfr.addSharedFunction("/views/common/_paginate.html");
+		jfr.addSharedFunction("/views/common/header.html");
+		jfr.addSharedFunction("/views/common/footer.html");
 		return jfr;
 	}
 }

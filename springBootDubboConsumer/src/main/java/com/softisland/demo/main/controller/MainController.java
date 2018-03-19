@@ -14,35 +14,36 @@ import com.jfinal.plugin.activerecord.Record;
 import com.softisland.api.demo.DemoApiService;
 
 @Controller
-public class MainController{
+public class MainController {
 
 	@Reference
 	private DemoApiService demoService;
 
 	@RequestMapping("/home")
 	@ResponseBody
-	public List<Record> home(String name ) {
-//		String name = getPara("name");
+	public List<Record> home(String name) {
+		// String name = getPara("name");
 		if (null == demoService) {
 			System.out.println("引用对象为:" + demoService);
 			return null;
 		}
 		List<Record> records = demoService.sayHello(name);
-		System.out.println(name+">查询数据为:"+records);
+
+		System.out.println(name + ">查询数据为:" + records);
 		return records;
 	}
-	
-	@RequestMapping("/index")
-	public String index(HttpServletRequest request,Model model) {
+
+	@RequestMapping({ "/index", "", "/" })
+	public String index(HttpServletRequest request, Model mav) {
 		String name = request.getParameter("name");
-		
-		if (null == demoService) {
-			System.out.println("引用对象为:" + demoService);
-		}
+
 		List<Record> records = demoService.sayHello(name);
-		System.out.println(name+">查询数据统计为:"+records.size()+"条数据");
-		model.addAttribute("records", records);
-		model.addAttribute("name", name);
+		List<Record> pages = demoService.getList(101, 4);
+		Record model = demoService.getVideoById("10010");
+		mav.addAttribute("records", records);
+		mav.addAttribute("pages", pages);
+		mav.addAttribute("name", name);
+		mav.addAttribute("model", model);
 		return "index";
 	}
 

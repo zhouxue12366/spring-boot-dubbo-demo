@@ -16,4 +16,17 @@ import com.jfinal.plugin.activerecord.Record;
 public interface DemoApiService {
 	
 	public List<Record> sayHello(String name);
+	
+	/**
+	 * 根据ID获取
+	 * @Title getVideoById
+	 * @Description TODO  
+	 * @param id
+	 * @return 
+	 * @since 2018年3月19日 下午4:36:07
+	 */
+	public Record getVideoById(String id);
+	
+	public List<Record> getList(int start,int end);
+	
 }
