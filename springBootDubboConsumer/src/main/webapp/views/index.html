@@ -2,12 +2,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>$(name)</title>
+<title>#(name ??)</title>
+
 </head>
 <body>
-#for(r :records)
-
+#for(r : records ??)
+	#(r.video_url ??)===#(r.player_thumb_img ??)
 #end
 
+#(url ??)
 </body>
 </html>

@@ -1,7 +1,5 @@
 package com.softisland.demo.common.jfinal.config;
 
-import com.alibaba.druid.filter.logging.Slf4jLogFilter;
-import com.alibaba.druid.filter.stat.StatFilter;
 import com.alibaba.druid.wall.WallFilter;
 import com.jfinal.config.Constants;
 import com.jfinal.config.Handlers;
@@ -18,7 +16,6 @@ import com.jfinal.plugin.activerecord.tx.TxByActionKeys;
 import com.jfinal.plugin.activerecord.tx.TxByMethodRegex;
 import com.jfinal.plugin.activerecord.tx.TxByMethods;
 import com.jfinal.plugin.druid.DruidPlugin;
-import com.jfinal.plugin.redis.RedisPlugin;
 import com.jfinal.template.Engine;
 
 /**
