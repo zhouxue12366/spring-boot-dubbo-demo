@@ -1,4 +1,4 @@
-package com.softisland.demo.main.controller;
+package com.softisland.demo.business.main.controller;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.jfinal.plugin.activerecord.Record;
-import com.softisland.api.demo.DemoApiService;
+import com.softisland.api.business.demo.DemoApiService;
 
 @Controller
 public class MainController {

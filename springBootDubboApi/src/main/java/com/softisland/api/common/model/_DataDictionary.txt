@@ -1,0 +1,15 @@
+Table: videos
+------------------+---------------+------+-----+---------+---------
+ Field            | Type          | Null | Key | Default | Remarks 
+------------------+---------------+------+-----+---------+---------
+ id               | INT(10)       | NO   | PRI |         |         
+ video_id         | INT(10)       | YES  |     |         |         
+ video_name       | VARCHAR(255)  | YES  |     |         |         
+ thumb_img        | VARCHAR(255)  | YES  |     |         |         
+ detail_url       | VARCHAR(255)  | YES  |     |         |         
+ player_thumb_img | VARCHAR(255)  | YES  |     |         |         
+ video_type       | VARCHAR(50)   | YES  |     |         |         
+ video_url        | VARCHAR(1024) | YES  |     |         |         
+ player_html      | VARCHAR(2048) | YES  |     |         |         
+------------------+---------------+------+-----+---------+---------
+

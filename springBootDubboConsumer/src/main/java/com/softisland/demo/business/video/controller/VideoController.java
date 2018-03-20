@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.alibaba.dubbo.config.annotation.Reference;
 import com.jfinal.plugin.activerecord.Record;
-import com.softisland.api.demo.DemoApiService;
+import com.softisland.api.business.demo.DemoApiService;
 
 @Controller
 @RequestMapping("/video/")

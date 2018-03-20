@@ -1,4 +1,4 @@
-package com.softisland.api.demo;
+package com.softisland.api.business.demo;
 
 import java.util.List;
 

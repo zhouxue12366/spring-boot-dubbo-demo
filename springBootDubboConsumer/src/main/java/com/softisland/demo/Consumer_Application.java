@@ -6,6 +6,15 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.ImportResource;
 
 
+/**
+ * 注意这两个配置类必须放在目录的最前面,否则其他包下面的配置命令@Configuration等无法自动获取加载
+ * @Title Consumer_Application.java
+ * @Description TODO
+ * @Company: 软岛
+ * @author zg
+ * @date 2018年3月20日 上午10:51:23
+ * @version V1.0
+ */
 @EnableAutoConfiguration
 @SpringBootApplication
 @ImportResource("classpath:dubbo-demo-consumer.xml") // 扫描加载dubbo的配置文件

@@ -16,6 +16,7 @@ import com.alibaba.druid.pool.DruidDataSource;
 
 /**
  * 通过main方法启动服务者
+ * 注意这两个配置类必须放在目录的最前面,否则其他包下面的配置命令@Configuration等无法自动获取加载
  * @Title provider_Application.java
  * @Description TODO
  * @Company: 软岛

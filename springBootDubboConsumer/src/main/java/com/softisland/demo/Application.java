@@ -7,7 +7,7 @@ import org.springframework.boot.web.support.SpringBootServletInitializer;
 
 /**
  * 修改启动类，继承 SpringBootServletInitializer 并重写 configure 方法
- * 
+ * 注意这两个配置类必须放在目录的最前面,否则其他包下面的配置命令@Configuration等无法自动获取加载
  * @Title SpringBootStartApplication.java
  * @Description TODO
  * @Company: 软岛

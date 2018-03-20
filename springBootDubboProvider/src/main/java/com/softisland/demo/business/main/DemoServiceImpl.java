@@ -1,11 +1,11 @@
-package com.softisland.demo.main;
+package com.softisland.demo.business.main;
 
 import java.util.List;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import com.jfinal.plugin.activerecord.Db;
 import com.jfinal.plugin.activerecord.Record;
-import com.softisland.api.demo.DemoApiService;
+import com.softisland.api.business.demo.DemoApiService;
 
 @Service
 public class DemoServiceImpl implements DemoApiService{
