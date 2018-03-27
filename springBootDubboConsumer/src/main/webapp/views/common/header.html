@@ -26,17 +26,27 @@
 			</div>
 			<div class="collapse navbar-collapse navbar-ex1-collapse">
 				<ul class="nav navbar-nav">
-					<li><a href="#(ctx)/"><i class="fa fa-home"></i> Home</a></li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Account</a>
+<!-- 					<li><a href="#(ctx)/"><i class="fa fa-home"></i> Home</a></li> -->
+					#for(item : menus ??)
+					#if(!item.parent_menu_id ??)
+					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i>#(item.name ??)</a>
 						<div class="dropdown-menu">
 							<div class="dropdown-inner">
 								<ul class="list-unstyled">
-									<li><a href="archive.html">Login</a></li>
-									<li><a href="archive.html">Register</a></li>
+									#for(subItem : menus ??)
+									#if(subItem.parent_menu_id ??)
+									#if(subItem.parent_menu_id == item.id+"")
+									<li><a href="#(ctx)/video/list">#(subItem.name ??)</a></li>
+									#end
+									#end
+									#end
 								</ul>
 							</div>
 						</div>
 					</li>
+					#end
+					#end
+					
 					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-play-circle-o"></i> Video</a>
 						<div class="dropdown-menu">
 							<div class="dropdown-inner">
@@ -47,35 +57,33 @@
 							</div> 
 						</div>
 					</li>
-					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-list"></i> Category</a>
-						<div class="dropdown-menu" style="margin-left: -203.625px;">
-							<div class="dropdown-inner">
-								<ul class="list-unstyled">
-									<li><a href="archive.html">Text 301</a></li>
-									<li><a href="archive.html">Text 302</a></li>
-									<li><a href="archive.html">Text 303</a></li>
-									<li><a href="archive.html">Text 304</a></li>
-									<li><a href="archive.html">Text 305</a></li>
-								</ul>
-								<ul class="list-unstyled">
-									<li><a href="archive.html">Text 306</a></li>
-									<li><a href="archive.html">Text 307</a></li>
-									<li><a href="archive.html">Text 308</a></li>
-									<li><a href="archive.html">Text 309</a></li>
-									<li><a href="archive.html">Text 310</a></li>
-								</ul>
-								<ul class="list-unstyled">
-									<li><a href="archive.html">Text 311</a></li>
-									<li><a href="archive.html">Text 312</a></li>
-									<li><a href="archive.html#">Text 313</a></li>
-									<li><a href="archive.html#">Text 314</a></li>
-									<li><a href="archive.html">Text 315</a></li>
-								</ul>
-							</div>
-						</div>
-					</li>
-					<li><a href="archive.html"><i class="fa fa-cubes"></i> Blocks</a></li>
-					<li><a href="contact.html"><i class="fa fa-envelope"></i> Contact</a></li>
+<!-- 					<li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-list"></i> Category</a> -->
+<!-- 						<div class="dropdown-menu" style="margin-left: -203.625px;"> -->
+<!-- 							<div class="dropdown-inner"> -->
+<!-- 								<ul class="list-unstyled"> -->
+<!-- 									<li><a href="archive.html">Text 301</a></li> -->
+<!-- 									<li><a href="archive.html">Text 302</a></li> -->
+<!-- 									<li><a href="archive.html">Text 303</a></li> -->
+<!-- 									<li><a href="archive.html">Text 304</a></li> -->
+<!-- 									<li><a href="archive.html">Text 305</a></li> -->
+<!-- 								</ul> -->
+<!-- 								<ul class="list-unstyled"> -->
+<!-- 									<li><a href="archive.html">Text 306</a></li> -->
+<!-- 									<li><a href="archive.html">Text 307</a></li> -->
+<!-- 									<li><a href="archive.html">Text 308</a></li> -->
+<!-- 									<li><a href="archive.html">Text 309</a></li> -->
+<!-- 									<li><a href="archive.html">Text 310</a></li> -->
+<!-- 								</ul> -->
+<!-- 								<ul class="list-unstyled"> -->
+<!-- 									<li><a href="archive.html">Text 311</a></li> -->
+<!-- 									<li><a href="archive.html">Text 312</a></li> -->
+<!-- 									<li><a href="archive.html#">Text 313</a></li> -->
+<!-- 									<li><a href="archive.html#">Text 314</a></li> -->
+<!-- 									<li><a href="archive.html">Text 315</a></li> -->
+<!-- 								</ul> -->
+<!-- 							</div> -->
+<!-- 						</div> -->
+<!-- 					</li> -->
 				</ul>
 			</div>
 		</div>
@@ -101,4 +109,10 @@
 	</div>
 </header>
 <!-- Header -->
+
+<<script type="text/javascript">
+
+function loadHeader(){
+}
+</script>
 #end

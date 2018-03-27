@@ -1,4 +1,4 @@
-package com.softisland.demo;
+package com.softisland.demo.common.provider;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.context.embedded.ConfigurableEmbeddedServletContainer;

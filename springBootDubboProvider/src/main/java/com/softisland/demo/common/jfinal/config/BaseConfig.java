@@ -17,6 +17,7 @@ import com.jfinal.plugin.activerecord.tx.TxByMethodRegex;
 import com.jfinal.plugin.activerecord.tx.TxByMethods;
 import com.jfinal.plugin.druid.DruidPlugin;
 import com.jfinal.template.Engine;
+import com.softisland.api.common.model._MappingKit;
 
 /**
  * 本 demo 仅表达最为粗浅的 jfinal 用法，更为有价值的实用的企业级用法 详见 JFinal 俱乐部:
@@ -75,7 +76,7 @@ public class BaseConfig extends JFinalConfig {
 		// 配置ActiveRecord插件
 		ActiveRecordPlugin arp = new ActiveRecordPlugin(druidPlugin);
 		// 所有映射在 MappingKit 中自动化搞定
-//		_MappingKit.mapping(arp);
+		_MappingKit.mapping(arp);
 		arp.setShowSql(true);// 控制台显示sql
 		me.add(arp);
 		

@@ -3,6 +3,7 @@ package com.softisland.api.business.demo;
 import java.util.List;
 
 import com.jfinal.plugin.activerecord.Record;
+import com.softisland.api.common.model.Menu;
 
 /**
  * 测试用例接口定义管理
@@ -28,5 +29,7 @@ public interface DemoApiService {
 	public Record getVideoById(String id);
 	
 	public List<Record> getList(int start,int end);
+	
+	public List<Menu> getHeaderList();
 	
 }

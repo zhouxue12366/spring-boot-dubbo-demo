@@ -1,13 +1,16 @@
-package com.softisland.demo;
+package com.softisland.demo.common.consumer;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.ImportResource;
+import org.springframework.jms.annotation.EnableJms;
 
 
 /**
- * 注意这两个配置类必须放在目录的最前面,否则其他包下面的配置命令@Configuration等无法自动获取加载
+ * 注意这两个配置类必须放在目录的最前面,否则其他包下面的配置命令@Configuration等无法自动获取加载,
+ * 可以使用注解@ComponentScan(basePackages={"com.softisland","com......"})来解决指定扫描spring注解命令的路径
  * @Title Consumer_Application.java
  * @Description TODO
  * @Company: 软岛
@@ -17,6 +20,8 @@ import org.springframework.context.annotation.ImportResource;
  */
 @EnableAutoConfiguration
 @SpringBootApplication
+@EnableJms
+@ComponentScan(basePackages={"com.softisland"})
 @ImportResource("classpath:dubbo-demo-consumer.xml") // 扫描加载dubbo的配置文件
 public class Consumer_Application {
 

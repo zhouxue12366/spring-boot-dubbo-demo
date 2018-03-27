@@ -39,5 +39,10 @@ public class VideoController {
 		mav.addAttribute("lists", lists);
 		return "business/video/list";
 	}
+	
+	@RequestMapping({"/",""})
+	public String home(HttpServletRequest request,HttpServletResponse response, Model mav){
+		return "business/video/home";
+	}
 
 }

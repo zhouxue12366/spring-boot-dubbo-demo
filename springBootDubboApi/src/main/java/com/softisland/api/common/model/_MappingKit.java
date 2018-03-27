@@ -16,6 +16,8 @@ import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 public class _MappingKit {
 	
 	public static void mapping(ActiveRecordPlugin arp) {
+		arp.addMapping("menu", "id", Menu.class);
+		arp.addMapping("most_viewed", "id", MostViewed.class);
 		arp.addMapping("videos", "id", Videos.class);
 	}
 }

@@ -6,6 +6,7 @@ import com.alibaba.dubbo.config.annotation.Service;
 import com.jfinal.plugin.activerecord.Db;
 import com.jfinal.plugin.activerecord.Record;
 import com.softisland.api.business.demo.DemoApiService;
+import com.softisland.api.common.model.Menu;
 
 @Service
 public class DemoServiceImpl implements DemoApiService{
@@ -28,6 +29,11 @@ public class DemoServiceImpl implements DemoApiService{
 	public List<Record> getList(int start,int end) {
 		List<Record> records = Db.find(" select * from videos limit "+ start +", "+ end );
 		return records;
+	}
+
+	@Override
+	public List<Menu> getHeaderList() {
+		return Menu.dao.find("select * from menu ");
 	}
 
 }
