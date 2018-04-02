@@ -10,19 +10,20 @@ Table: menu
 ----------------+--------------+------+-----+---------+---------
 
 Table: most_viewed
---------------+--------------+------+-----+---------+---------
- Field        | Type         | Null | Key | Default | Remarks 
---------------+--------------+------+-----+---------+---------
- id           | INT(10)      | NO   | PRI |         |         
- old_id       | VARCHAR(50)  | YES  |     |         |         
- name         | VARCHAR(100) | YES  |     |         |         
- img_src      | VARCHAR(200) | YES  |     |         |         
- html_url     | VARCHAR(200) | YES  |     |         |         
- play_img_src | VARCHAR(200) | YES  |     |         |         
- play_url     | VARCHAR(200) | YES  |     |         |         
- tag_img      | TEXT(65535)  | YES  |     |         |         
- tag_video    | TEXT(65535)  | YES  |     |         |         
---------------+--------------+------+-----+---------+---------
+---------------+--------------+------+-----+---------+---------
+ Field         | Type         | Null | Key | Default | Remarks 
+---------------+--------------+------+-----+---------+---------
+ id            | INT(10)      | NO   | PRI |         |         
+ old_id        | VARCHAR(500) | YES  |     |         |         
+ name          | VARCHAR(100) | YES  |     |         |         
+ img_src       | VARCHAR(500) | YES  |     |         |         
+ html_url      | VARCHAR(200) | YES  |     |         |         
+ play_img_src  | VARCHAR(500) | YES  |     |         |         
+ play_url      | VARCHAR(500) | YES  |     |         |         
+ tag_img       | TEXT(65535)  | YES  |     |         |         
+ tag_video     | TEXT(65535)  | YES  |     |         |         
+ update_status | BIGINT(19)   | YES  |     | 0       |         
+---------------+--------------+------+-----+---------+---------
 
 Table: videos
 ------------------+---------------+------+-----+---------+---------

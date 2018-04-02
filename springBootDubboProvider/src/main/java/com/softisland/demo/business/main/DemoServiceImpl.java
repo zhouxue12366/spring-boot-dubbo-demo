@@ -7,6 +7,7 @@ import com.jfinal.plugin.activerecord.Db;
 import com.jfinal.plugin.activerecord.Record;
 import com.softisland.api.business.demo.DemoApiService;
 import com.softisland.api.common.model.Menu;
+import com.softisland.api.common.model.MostViewed;
 
 @Service
 public class DemoServiceImpl implements DemoApiService{
@@ -35,5 +36,13 @@ public class DemoServiceImpl implements DemoApiService{
 	public List<Menu> getHeaderList() {
 		return Menu.dao.find("select * from menu ");
 	}
+
+	@Override
+	public List<MostViewed> getMostViewedList() {
+		return MostViewed.dao.find(" select * from most_viewed order by id DESC limit 8 ");
+	}
+	
+	
+	
 
 }

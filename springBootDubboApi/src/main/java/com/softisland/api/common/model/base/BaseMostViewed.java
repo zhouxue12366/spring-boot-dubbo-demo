@@ -90,4 +90,13 @@ public abstract class BaseMostViewed<M extends BaseMostViewed<M>> extends Model<
 		return getStr("tag_video");
 	}
 
+	public M setUpdateStatus(java.lang.Long updateStatus) {
+		set("update_status", updateStatus);
+		return (M)this;
+	}
+	
+	public java.lang.Long getUpdateStatus() {
+		return getLong("update_status");
+	}
+
 }

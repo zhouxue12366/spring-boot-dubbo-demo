@@ -4,6 +4,7 @@ import java.util.List;
 
 import com.jfinal.plugin.activerecord.Record;
 import com.softisland.api.common.model.Menu;
+import com.softisland.api.common.model.MostViewed;
 
 /**
  * 测试用例接口定义管理
@@ -31,5 +32,8 @@ public interface DemoApiService {
 	public List<Record> getList(int start,int end);
 	
 	public List<Menu> getHeaderList();
+	
+	
+	public List<MostViewed> getMostViewedList();
 	
 }

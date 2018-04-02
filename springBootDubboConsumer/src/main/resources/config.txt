@@ -1,3 +1,3 @@
-activemq_host = tcp://172.16.16.18:61616
+activemq_host = tcp://172.16.20.160:61616
 activemq_username = admin
 activemq_pwd = admin
